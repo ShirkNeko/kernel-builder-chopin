@@ -3,7 +3,7 @@
     "kernelSource": {
       "name": "bxsj-KernelSU-Proton-release",
       "repo": "https://github.com/ShirkNeko/kernel_xiaomi_chopin_android_S",
-      "branch": "r",
+      "branch": "S",
       "device": "chopin",
       "defconfig": "chopin_userdocker_defconfig"
     },
