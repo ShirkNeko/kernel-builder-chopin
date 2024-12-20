@@ -225,7 +225,7 @@ jobs:
       - name: 添加runc补丁
         working-directory: ${{ env.KERNEL_NAME }}
         run: |
-          wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/runcpatch.sh
+          wget https://github.com/ShirkNeko/kernel_xiaomi_chopin_android_S/releases/download/1/runcpatch.sh
           chmod a+x runcpatch.sh
           if [ -f kernel/cgroup.c ]; then
           ./runcpatch.sh kernel/cgroup.c               
