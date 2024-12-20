@@ -14,7 +14,7 @@ on:
 jobs:
   Set-repos:
     name: "🐂 Parse repos.json"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     outputs:
       repos: ${{ steps.generate-matrix.outputs.repos }}
       builddate: ${{ steps.generate-builddate.outputs.builddate }}
@@ -34,7 +34,7 @@ jobs:
 
   Build-Kernel:
     name: "🐎 Build kernel"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-20.04
     needs:
       - Set-repos
     strategy:
@@ -248,7 +248,6 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
           echo "PATH Variable: $PATH"
-          make KBUILD_OUTPUT=output
           make ${{ env.args }}
 
       - name: "💛 Upload Image"
