@@ -248,6 +248,7 @@ jobs:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
           echo "PATH Variable: $PATH"
+          make KBUILD_OUTPUT=output
           make ${{ env.args }}
 
       - name: "💛 Upload Image"
